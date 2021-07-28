@@ -40,6 +40,8 @@ namespace ServiceProfile
 
             services.AddScoped<IKelompok, KelompokData>();
             services.AddScoped<ILookup, LookupData>();
+            services.AddScoped<ISkillset, SkillsetData>();
+            services.AddScoped<IJenjab, JenjabData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
