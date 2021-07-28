@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ServiceProfile.Data;
 using ServiceProfile.Models;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,9 @@ namespace ServiceProfile
             });
             services.AddDbContext<ProteamContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IKelompok, KelompokData>();
+            services.AddScoped<ILookup, LookupData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
