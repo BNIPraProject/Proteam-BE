@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServiceProfile.Data;
+using ServiceProfile.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,40 +16,71 @@ namespace ServiceProfile.Controllers
     {
         private IJenjab _jenjab;
 
-        public JenjabController (IJenjab jenjab)
+        public JenjabController(IJenjab jenjab)
         {
             _jenjab = jenjab;
         }
         // GET: api/<JenjabController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Jenjab>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var result = await _jenjab.GetAll();
+            return result;
         }
 
         // GET api/<JenjabController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Jenjab> Get(int id)
         {
-            return "value";
+            var result = await _jenjab.GetById(id.ToString());
+            return result;
         }
 
         // POST api/<JenjabController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Route("Post")]
+        public async Task<IActionResult> Post([FromBody] Jenjab jenjab)
         {
+            try
+            {
+                await _jenjab.Insert(jenjab);
+                return Ok($"Jenjab {jenjab.JenjangJabatan} sukses ditambahkan");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         // PUT api/<JenjabController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(int id, [FromBody] Jenjab jenjab)
         {
+            try
+            {
+                await _jenjab.Update(id.ToString(), jenjab);
+                return Ok($"Data Jenjab id = {id} sukses diupdate");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // DELETE api/<JenjabController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            try
+            {
+                await _jenjab.Delete(id.ToString());
+                return Ok($"Data Jenjang Jabatan id = {id} sukses diupdate ");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace ServiceProfile.Data
         public async Task Delete(string id)
         {
             var result = await GetById(id);
-            if (result !=null)
+            if (result != null)
             {
                 try
                 {
@@ -40,8 +40,8 @@ namespace ServiceProfile.Data
         public async Task<IEnumerable<Skillset>> GetAll()
         {
             var result = await (from d in _db.Skillsets
-                                 orderby d.Skillset1
-                                 select d).ToListAsync();
+                                orderby d.Skillset1
+                                select d).ToListAsync();
             return result;
         }
 
@@ -55,7 +55,7 @@ namespace ServiceProfile.Data
 
         public async Task Insert(Skillset obj)
         {
-           try
+            try
             {
                 _db.Skillsets.Add(obj);
                 await _db.SaveChangesAsync();
@@ -72,7 +72,7 @@ namespace ServiceProfile.Data
 
         public async Task Update(string id, Skillset obj)
         {
-          try
+            try
             {
                 var result = await GetById(id);
                 if (result != null)
