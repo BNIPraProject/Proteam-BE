@@ -20,5 +20,6 @@ namespace ServiceProfile.Models
         public string UpdatedBy { get; set; }
         public DateTime? CreatedTime { get; set; }
         public DateTime? UpdateTime { get; set; }
+        public string Notes { get; set; }
     }
 }

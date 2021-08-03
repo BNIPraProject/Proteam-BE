@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Document\\bni techship\\BE-Proteam Clone\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj": {}
+    "C:\\Users\\ASUS\\Source\\Repos\\BNIPraProject\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj": {}
   },
   "projects": {
-    "D:\\Document\\bni techship\\BE-Proteam Clone\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj": {
+    "C:\\Users\\ASUS\\Source\\Repos\\BNIPraProject\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Document\\bni techship\\BE-Proteam Clone\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Source\\Repos\\BNIPraProject\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj",
         "projectName": "ServiceProfile",
-        "projectPath": "D:\\Document\\bni techship\\BE-Proteam Clone\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Document\\bni techship\\BE-Proteam Clone\\Proteam-BE\\BE-Proteam\\ServiceProfile\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Source\\Repos\\BNIPraProject\\Proteam-BE\\BE-Proteam\\ServiceProfile\\ServiceProfile.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Source\\Repos\\BNIPraProject\\Proteam-BE\\BE-Proteam\\ServiceProfile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
