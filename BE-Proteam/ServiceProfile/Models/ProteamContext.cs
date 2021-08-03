@@ -141,6 +141,8 @@ namespace ServiceProfile.Models
                 entity.Property(e => e.UpdatedBy).HasMaxLength(50);
 
                 entity.Property(e => e.VendorName).HasMaxLength(50);
+
+                entity.Property(e => e.Notes).HasMaxLength(255);
             });
 
             modelBuilder.Entity<ResourceEmployee>(entity =>
