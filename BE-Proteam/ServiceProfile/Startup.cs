@@ -49,6 +49,7 @@ namespace ServiceProfile
             services.AddScoped<ILookup, LookupData>();
             services.AddScoped<ISkillset, SkillsetData>();
             services.AddScoped<IJenjab, JenjabData>();
+            services.AddScoped<IResourceEmployee, ResourceEmployeeData>();
             services.AddScoped<IEmployeeSkill, EmployeeSkillData>();
             services.AddScoped<IManday, MandayData> ();
         }
