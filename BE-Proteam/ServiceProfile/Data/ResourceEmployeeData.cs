@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using ServiceProfile.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MasterRole_GetById.Tools;
+//using MasterRole_GetById.Tools;
 
 namespace ServiceProfile.Data
 {

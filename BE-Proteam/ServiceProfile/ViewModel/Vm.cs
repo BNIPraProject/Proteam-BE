@@ -30,7 +30,7 @@ namespace ServiceProfile.ViewModel
         public string UpdatedBy { get; set; }
         public DateTime? CreatedTime { get; set; }
         public DateTime? UpdateTime { get; set; }
-        
+
 
         public string Skill { get; set; }
 
@@ -53,11 +53,47 @@ namespace ServiceProfile.ViewModel
         public int TotalMandays { get; set; }
     }
 
-    public class Dashboard
+    public class DashboardVendor
     {
         public int TotalVendor { get; set; }
 
         public int TotalMandays { get; set; }
-        public List<VendorMandays> listMandays { get; set; }
+        public List<VendorMandays> ListVendors { get; set; }
+    }
+
+    public class ResourceKelompok
+    {
+        public int Kelompok_id { get; set; }
+        public string Kelompok { get; set; }
+
+        public int TotalResourceKelompok { get; set; }
+    }
+
+    public class ResourceRole
+    {
+        public int Role { get; set; }
+        public string Name { get; set; }
+
+        public int TotalResourceRole { get; set; }
+    }
+
+    public class ResourceType
+    {
+        public int ResourceTypeVal { get; set; }
+        public string Name { get; set; }
+
+        public int TotalResourceType { get; set; }
+    }
+
+
+    public class DashboardResources
+    {
+        public int TotalResource { get; set; }
+
+        public List<ResourceKelompok> ListResourceKelompok { get; set; }
+
+        public List<ResourceRole> ListResourceRole { get; set; }
+
+        public List<ResourceType> ListResourceType { get; set; }
     }
 }
